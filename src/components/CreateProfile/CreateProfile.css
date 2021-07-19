@@ -1,0 +1,78 @@
+body {
+    background-color: #ebd2be;
+}
+
+.container {
+    width: 850px;
+    height: 600px;
+    background-color: white;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.form {
+    width: 100%
+}
+
+.form-text {
+    text-align: center;
+    margin: 25px 25px;
+    font-size: 30px;
+}
+
+.form-div {
+    display: flex;
+    justify-content: center;
+}
+.form-group-inline {
+    display: flex
+    justify-content: space-evenly;
+}
+
+.form-div-inline .inline-container {
+    display: inline-block;
+}
+
+.form-group-inline .inline-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group-inline .inline-container input {
+    padding: 5px 5px;
+    width: 200px
+}
+
+.form-group-block {
+    margin-left: 75px;
+    margin-top: 20px;
+}
+
+.block-container {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 20px;
+}
+
+. form-group-block .block-container button {
+    padding: 10px 10px;
+    border: none;
+    background-color: black;
+    color: white
+    font-size: 20px;
+    cursor: :default;
+}
+
+.button-container button:disabled {
+    background-color: grey;
+}
+
+.errorMessage {
+    font-size: 20px;
+    color: yellow;
+}
