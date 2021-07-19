@@ -7,6 +7,27 @@ _**Created by Daisy**_
 
 #### **USES ICONFINDER'S API TO CONNECT USERS**
 
+## QUESTIONNAIRE CATEGORIES
+- Food
+- Random
+
+## QUESTIONNAIRE QUESTIONS:
+**FOOD**
+
+1. Breakfast sandwich OR breakfast plate?
+2. Coffee OR tea?
+3. Milk OR juice?
+4. Pizza OR Chinese takeout?
+5. Ice cream OR cake?
+
+**RANDOM**
+
+1. Writing OR typing?
+2. Tennis OR volleyball?
+3. Calling OR texting?
+4. Nike OR Adidas?
+5. Wine OR beer?
+
 ## SETUP/INSTALLATION REQUIREMENTS
 
 - Copy the Github project link
