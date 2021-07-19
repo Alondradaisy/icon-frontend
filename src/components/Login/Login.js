@@ -27,6 +27,8 @@ export class Login extends Component {
     <div className="container">
       <div className="form-text">Login</div>
 
+      <div className="home-container"
+
       <div className="form-div">
         <form className="form">
           <div className="form-group-block">
