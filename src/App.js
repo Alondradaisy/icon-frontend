@@ -1,14 +1,9 @@
+import { render } from "@testing-library/react";
 import React, { Component } from "react";
 import { ToastContainer } from "react-toastify";
 
 import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header"></header>
-    </div>
-  );
-}
+export class App extends Component {}
 
 export default App;
