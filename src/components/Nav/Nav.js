@@ -8,7 +8,7 @@ export class Nav extends Component {
       <nav className="Navbar">
         <div className="h1-logo">
           <h1>
-            <Link to="/">HOMEPAGE</Link>
+            <Link to="/">HOME</Link>
           </h1>
         </div>
 
@@ -17,7 +17,7 @@ export class Nav extends Component {
             <li>
               {this.props.user ? (
                 <NavLink activeClassName="selected" to="/logged-in">
-                  You are logged in!
+                  You are logged in! {this.props.user.email}
                 </NavLink>
               ) : (
                 ""
@@ -35,19 +35,26 @@ export class Nav extends Component {
 
             <li>
               {this.props.user ? (
-                <NavLink activeClassName="selected" to="/iconfinder">
+                <NavLink activeClassName="selected" to="/icons">
                   Browse Icons
                 </NavLink>
               )}
             </li>
+
             <li>
                 {this.props.user ? (
-                    <NavLink
-                        activeStyle={{ borderBottom: "2px solid white" }}
-                        to="/login">
-                        
-                    </NavLink>
-
+                  <NavLink
+                    activeStyle={{ borderBottom: "2px solid white" }}
+                    to="/login" 
+                    onClick={this.props.handleUserLogout}>
+                    Logout
+                  </NavLink>
+                ) : (
+                  <NavLink
+                    activeStyle={{ borderBottom: "2px solid white" }}
+                    to="/login">
+                    Login
+                  </NavLink>
                 )}
             </li>
           </ul>

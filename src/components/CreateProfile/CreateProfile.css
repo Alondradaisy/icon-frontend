@@ -16,7 +16,7 @@ body {
 }
 
 .form {
-    width: 100%
+    width: 100%;
 }
 
 .form-text {
@@ -30,7 +30,7 @@ body {
     justify-content: center;
 }
 .form-group-inline {
-    display: flex
+    display: flex;
     justify-content: space-evenly;
 }
 
@@ -63,9 +63,9 @@ body {
     padding: 10px 10px;
     border: none;
     background-color: black;
-    color: white
+    color: white;
     font-size: 20px;
-    cursor: :default;
+    cursor: default;
 }
 
 .button-container button:disabled {
