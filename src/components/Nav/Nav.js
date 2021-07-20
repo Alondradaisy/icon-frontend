@@ -38,9 +38,17 @@ export class Nav extends Component {
                 <NavLink activeClassName="selected" to="/iconfinder">
                   Browse Icons
                 </NavLink>
-              ) : (
-                ""
               )}
+            </li>
+            <li>
+                {this.props.user ? (
+                    <NavLink
+                        activeStyle={{ borderBottom: "2px solid white" }}
+                        to="/login">
+                        
+                    </NavLink>
+
+                )}
             </li>
           </ul>
         </div>
