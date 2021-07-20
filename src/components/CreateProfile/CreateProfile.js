@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import jwtDecode from "jwt-decode";
 // import validators here -> check out validator npm docs
 import { toast } from "react-toastify";
-import Axios from "../../utils/Axios";
-import UserAuth from "../../utils/UserAuth";
+import Axios from "../utils/Axios";
+import UserAuth from "../utils/UserAuth";
 
 import "./CreateProfile.css";
 

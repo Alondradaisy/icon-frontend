@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import jwtDecode from "jwt-decode";
 
 import { toast } from "react-toastify";
-import Axios from "../../utils/Axios";
-import UserAuth from "../../utils/UserAuth";
-import AxiosAuthToken from "../../utils/AxiosAuthToken";
+import Axios from "../utils/Axios";
+import UserAuth from "../utils/UserAuth";
+import AxiosAuthToken from "../utils/AxiosAuthToken";
 
 import "./Login.css";
 
@@ -27,7 +27,7 @@ export class Login extends Component {
     <div className="container">
       <div className="form-text">Login</div>
 
-      <div className="home-container"
+      <div className="home-container">
 
       <div className="form-div">
         <form className="form">
