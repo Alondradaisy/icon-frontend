@@ -12,7 +12,37 @@ export class App extends Component {
     user: null,
   };
 
-  componentDidMount() {}
+  //handle use login info
+  handleUserLogin = (user) => {
+    this.setState({
+      user: {
+        email: user.email,
+      },
+    });
+  };
+
+  //handle user logout process
+  handleUserLogout = () => {
+    window.localStorage.removeItem("jwtToken");
+    AxiosAuthToken(null);
+    this.setState({
+      user: null,
+    });
+  };
+
+  render() {
+    return (
+      <>
+        <ToastContainer position="top-center" />
+
+        <MainRouter
+          user={this.state.user}
+          handleUserLogin={this.handleUserLogin}
+          handleUserLogout={this.handleUserLogin}
+        />
+      </>
+    );
+  }
 }
 
 export default App;

@@ -5,7 +5,7 @@ const Axios = axios.create({
     process.env.NODE_ENV === "development"
       ? "http://localhost:8080"
       : "deploy CLOUD ADDRESS",
-  timeout: 40000,
+  timeout: 50000,
 });
 
 export default Axios;
