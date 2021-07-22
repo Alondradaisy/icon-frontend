@@ -6,7 +6,7 @@ import CreateProfile from "./components/CreateProfile/CreateProfile";
 import Nav from "./components/Nav/Nav";
 import Login from "./components/Login/Login";
 import Questionnaire from "./components/Questionnaire/Questionnaire";
-import Icons from "./components/Icons/icons";
+import Icons from "./components/Icons/Icons";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 
 const MainRouter = (props) => {
@@ -23,7 +23,7 @@ const MainRouter = (props) => {
         handleUserLogout={props.handleUserLogout}
       />
 
-      <Route exact path="./sign-up" component={Signup} />
+      <Route exact path="./icons" component={Icons} />
       <Route
         exact
         path="./login"

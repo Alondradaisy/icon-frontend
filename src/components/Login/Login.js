@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { isEmpty, isEmail } from "validator";
+import { isEmpty } from "validator";
 import jwtDecode from "jwt-decode";
 
 import { toast } from "react-toastify";
@@ -23,7 +23,7 @@ export class Login extends Component {
   componentDidMount() {
     let isUserAuth = UserAuth();
 
-    if (isAuth) {
+    if (isUserAuth) {
       this.props.history.push("/questionnaire");
     }
   }
@@ -102,8 +102,8 @@ export class Login extends Component {
       let jwtToken = result.data.payload;
 
       console.log(jwtToken);
-      //call setAxiosAuthToken here
-      setAxiosAuthToken(jwtToken);
+      //call AxiosAuthToken here
+      AxiosAuthToken(jwtToken);
 
       let decodedToken = jwtDecode(jwtToken);
       console.log(decodedToken);

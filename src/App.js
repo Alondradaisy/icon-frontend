@@ -12,6 +12,20 @@ export class App extends Component {
     user: null,
   };
 
+  componentDidMount() {
+    let getJwtToken = window.localStorage.getItem("jwtToken");
+    const currentTime = Date.now() / 1000; //current time of use
+
+    let decodedJWTToken = jwtDecode(getJwtToken);
+
+    // if the jwt token time is less than current, expire the session
+    if (decodedJWTToken.exp < currentTime) {
+      this.handleUserLogout();
+    } else {
+      this.handleUserLogin(decodedJWTToken);
+    }
+  }
+
   //handle use login info
   handleUserLogin = (user) => {
     this.setState({

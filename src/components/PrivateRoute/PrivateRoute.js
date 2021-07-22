@@ -1,5 +1,3 @@
-import { Router } from "express";
-import React, { Component } from "react";
 import { Route, Redirect } from "react-router-dom";
 import UserAuth from "../utils/UserAuth";
 

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import jwtDecode from "jwt-decode";
-// import validators here -> check out validator npm docs
+import { isAlpha, isEmail, isAlphanumeric, isStrongPassword } from "validator";
 import { toast } from "react-toastify";
 import Axios from "../utils/Axios";
 import UserAuth from "../utils/UserAuth";
@@ -30,10 +30,18 @@ export class CreateProfile extends Component {
     confirmPasswordOnFocus: false,
   };
 
+  componentDidMount() {
+    let isAuth = UserAuth();
+
+    if (isAuth) {
+      this.props.history.push("/questionnaire");
+    }
+  }
+
   handleOnChange = (event) => {
     this.setState(
       {
-        [event.target.name]: name.target.value,
+        [event.target.name]: event.target.value,
       },
       () => {
         if (
@@ -186,7 +194,7 @@ export class CreateProfile extends Component {
         userInputObject
       );
       console.log(successful);
-      toast.success(`${success.data.message}`);
+      toast.success(`${successful.data.message}`);
     } catch (e) {
       toast.error(`${e.response.data.message}`);
     }
