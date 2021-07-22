@@ -16,6 +16,15 @@ export class Nav extends Component {
           <ul>
             <li>
               {this.props.user ? (
+                <NavLink activeClassName="selected" to="create-profile">
+                  Create A Profile
+                </NavLink>
+              ) : (
+                ""
+              )}
+            </li>
+            <li>
+              {this.props.user ? (
                 <NavLink activeClassName="selected" to="/login">
                   You are logged in! {this.props.user.email}
                 </NavLink>
@@ -23,18 +32,13 @@ export class Nav extends Component {
                 ""
               )}
             </li>
+
             <li>
               {this.props.user ? (
                 <NavLink activeClassName="selected" to="/questionnaire">
                   Questionnaire
                 </NavLink>
               ) : (
-                ""
-              )}
-            </li>
-
-            <li>
-              {this.props.user ? (
                 <NavLink activeClassName="selected" to="/icons">
                   Browse Icons
                 </NavLink>
@@ -42,20 +46,22 @@ export class Nav extends Component {
             </li>
 
             <li>
-                {this.props.user ? (
-                  <NavLink
-                    activeStyle={{ borderBottom: "2px solid white" }}
-                    to="/login" 
-                    onClick={this.props.handleUserLogout}>
-                    Logout
-                  </NavLink>
-                ) : (
-                  <NavLink
-                    activeStyle={{ borderBottom: "2px solid white" }}
-                    to="/login">
-                    Login
-                  </NavLink>
-                )}
+              {this.props.user ? (
+                <NavLink
+                  activeStyle={{ borderBottom: "2px solid white" }}
+                  to="/login"
+                  onClick={this.props.handleUserLogout}
+                >
+                  Logout
+                </NavLink>
+              ) : (
+                <NavLink
+                  activeStyle={{ borderBottom: "2px solid white" }}
+                  to="/login"
+                >
+                  Login
+                </NavLink>
+              )}
             </li>
           </ul>
         </div>

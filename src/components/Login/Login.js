@@ -43,9 +43,10 @@ export class Login extends Component {
           } else {
             this.setState({
               emailError: "",
-            }),
+            });
           }
         }
+
         if (event.target.name === "password") {
           if (isEmpty(this.state.password)) {
             this.setState({
@@ -73,7 +74,7 @@ export class Login extends Component {
             canSubmit: false,
           });
         } else {
-          this.setState({ 
+          this.setState({
             canSubmit: true,
           });
         }
@@ -113,7 +114,6 @@ export class Login extends Component {
       toast.success("Successfully logged in!");
 
       this.props.history.push("/questionnaire");
-
     } catch (e) {
       if (e.response.status === 429) {
         toast.error(e.response.data);
@@ -147,10 +147,9 @@ export class Login extends Component {
                     onFocus={this.handleInputOnFocus}
                     autoFocus
                   />
-                  <div className="errorMessage">{emailError && emailError}
-                  </div>
+                  <div className="errorMessage">{emailError && emailError}</div>
                 </div>
-              
+
                 <div className="form-group-block">
                   <div className="block-container">
                     <label htmlFor="password">Password</label>
@@ -170,7 +169,9 @@ export class Login extends Component {
                 </div>
 
                 <div className="button-container">
-                  <button type="submit" disabled={canSubmit}>Log me in!</button>
+                  <button type="submit" disabled={canSubmit}>
+                    Log me in!
+                  </button>
                 </div>
               </div>
             </form>
