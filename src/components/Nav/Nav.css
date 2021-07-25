@@ -1,0 +1,44 @@
+/* styling for nav*/
+.Navbar {
+    height: 75px;
+    background-color: ivory;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .h1-logo {
+    padding: 20px;
+  }
+  
+  .h1-logo a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .h1-logo h1 {
+    font-size: 20px;
+  }
+  
+  div ul {
+    padding: 20px;
+  }
+  
+  div ul li {
+    display: inline-block;
+  }
+  
+  div ul li a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .selected {
+    border-bottom: 1px solid black;
+  }
+  
+  .right-side-nav ul li:not(:last-child) {
+    margin-right: 15px;
+  }
+  
