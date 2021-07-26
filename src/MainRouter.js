@@ -14,17 +14,17 @@ const MainRouter = (props) => {
     <Router>
       <Nav user={props.user} handleUserLogout={props.handleUserLogout} />
 
-      <PrivateRoute exact path="/create-profile" component={CreateProfile} />
+      <PrivateRoute exact path="/add-friends" component={AddFriends} />
       <Route exact path="./icons" component={Icons} />
       <PrivateRoute
         exact
-        path="/login"
-        component={Login}
+        path="/MyProfile"
+        component={MyProfile}
         handleUserLogout={props.handleUserLogout}
       />
       <Route
         exact
-        path="./login"
+        path="./create-profile"
         render={(routerProps) => (
           <Login {...routerProps} handleUserLogin={props.handleUserLogin} />
         )}
