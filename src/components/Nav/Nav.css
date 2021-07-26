@@ -6,39 +6,37 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
-  
-  .h1-logo {
+}
+
+.h1-logo {
     padding: 20px;
-  }
-  
-  .h1-logo a {
+}
+
+.h1-logo a {
     text-decoration: none;
     color: black;
-  }
-  
-  .h1-logo h1 {
+}
+.h1-logo h1 {
     font-size: 20px;
-  }
-  
-  div ul {
+}
+
+div ul {
     padding: 20px;
-  }
-  
-  div ul li {
+}
+
+div ul li {
     display: inline-block;
-  }
-  
-  div ul li a {
+}
+
+div ul li a {
     text-decoration: none;
     color: black;
-  }
-  
-  .selected {
+}
+
+.selected {
     border-bottom: 1px solid black;
-  }
-  
-  .right-side-nav ul li:not(:last-child) {
+}
+
+.right-side-nav ul li:not(:last-child) {
     margin-right: 15px;
-  }
-  
+}
