@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import jwtDecode from "jwt-decode";
 import { isAlpha, isEmail, isAlphanumeric, isStrongPassword } from "validator";
 import { toast } from "react-toastify";
 import Axios from "../utils/Axios";
